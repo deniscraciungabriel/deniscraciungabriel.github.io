@@ -43,7 +43,7 @@ Search.onkeyup = (e) =>{
 function select(element){
     let selectUserData = element.textContent.split(" ").join("");
     if(selectUserData[selectUserData.length-2] == "p"){
-        window.location.pathname = "/Programming/"+ selectUserData.replace("(p)", "") + "/" +(selectUserData.replace("(p)", ""))+".html";
+        window.location.pathname = "/programming/"+ selectUserData.replace("(p)", "") + "/" +(selectUserData.replace("(p)", ""))+".html";
     }
     else if(selectUserData[selectUserData.length-2] == "c"){
         window.location.pathname = "/cybersecurity/"+ selectUserData.replace("(c)", "") + "/" +(selectUserData.replace("(c)", ""))+".html";
