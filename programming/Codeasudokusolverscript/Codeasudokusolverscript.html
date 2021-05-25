@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>How to code a script that solves every Sudoku</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <script src="https://use.fontawesome.com/902264e2a2.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3809661025676990" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <div class="header">
+
+        <div class="HeaderTitle">
+            <img src="../Images/logo.png" class="HeaderImage">
+
+            <div class="HeaderName">
+                <h1 id="Name">Denis Craciun</h1>
+                <span id="Qualify">Web Developer</span>
+            </div>
+            
+        </div>
+
+
+        
+        <div class="HeaderNav">
+
+            <div class="NavBar">
+                <a href="../../index.html"><div id="Home">Home</div></a>
+                <a href="../../programming/prog.html"><div id="Programming">Programming</div></a>
+                <a href="../../cybersecurity/cyber.html"><div id="Cybersecurity">Cybersecurity</div></a>
+                <a href="../../about/about.html"><div id="AboutMe">About Me</div></a>
+            </div>
+
+            <div class="SearchWrapper">
+                <div class="Search">
+                    <div class="fa fa-search"></div>
+                    <input id ="searchbar" class="search" type="text" placeholder="Search" />
+                    <div class="fa fa-times" onclick="DeleteValue()"></div>
+                </div>
+                <div class="suggested">
+                                      
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+
+        <div class="MobileNav">
+
+            <div id="toggle-btn" onclick="showbtn(); showbar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <div id="sidebar">
+            
+                <ul>
+                    <a href="../../index.html"><li class="Home">Home</li></a>
+                    <a href="../../programming/prog.html"><li>Programming</li></a>
+                    <a href="../../cybersecurity/cyber.html"><li>Cybersecurity</li></a>
+                    <a href="../../about/about.html"><li>About</li></a>
+                </ul>
+        
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="Title">
+        Code a script that solves Sudokus
+    </div>
+
+
+    
+    <div class="Content" onclick="hidebar()">
+
+        <div class="Article">
+            <img class="ArticleImage"src="https://thesudoku.com/assets/thesudoku-image.png">
+            <p>
+                Hi everyone! Today I’ll show you how I coded a script that can solve every human solvable sudoku. I made this using Python with no libraries imported. The technique I am approaching this with is called backtracking, which consists in going on your way until something goes wrong. When that something goes wrong, you go back to your steps, change them, and try again. It might seem time consuming or not efficient but it is perfect for an algorithm like this and you will see why. Let’s get into it:
+            </p>
+
+            <div class="paragraph"> 
+                <h3>1. Input our sudoku</h3>
+                <p>
+                    We are going to store our sudoku numbers in a 2D array in Python, so we have columns and rows coordinates. If you want you can easily add an input for the used to insert the numbers, but I just didn’t do that. Putting the sudoku in a 2D list would look something along these lines
+                </p>
+                <div class="code">
+                    sudoku = <br>[<br>
+                    [5, 3, 0, 0, 7, 0, 0, 0, 0],<br>
+                    [6, 0, 0, 1, 9, 5, 0, 0, 0],<br>
+                    [0, 9, 8, 0, 0, 0, 0, 6, 0],<br>
+                    [8, 0, 0, 0, 6, 0, 0, 0, 3],<br>
+                    [4, 0, 0, 8, 0, 3, 0, 0, 1],<br>
+                    [7, 0, 0, 0, 2, 0, 0, 0, 6],<br>
+                    [0, 6, 0, 0, 0, 0, 2, 8, 0],<br>
+                    [0, 0, 0, 4, 1, 9, 0, 0, 5],<br>
+                    [0, 0, 0, 0, 8, 0, 0, 7, 9]<br>
+                ]
+                </div>
+            </div>
+            <div class="paragraph">
+                <h3>2. Make the sudoku more readable</h3>
+                <p>
+                    As we are running this script with no GUI, all we are going to see are some numbers in the terminal that might look a bit confusing. That’s why I made a function that can re-write our sudoku in a clearer way. What this function does is splitting the sudoku in squares using “-“ and “|” for creating horizontal and vertical lines. 
+                </p>
+                <div class="code">
+                    def ShowBetter(sudoku):<br>
+                    &nbsp for i in range (0, len(sudoku)):
+                    <div class="indent">
+                        if i % 3 == 0 and i != 0:
+                        <div class="indent2">
+                            print("- - - - - - - - - - - -")
+                        </div>
+                    </div>
+                    <div class="indent">
+                        for j in range (0, len(sudoku[0])):
+                        <div class="indent2">
+                            if j % 3 == 0 and j!= 0:
+                            <div class="indent2">
+                                &nbsp &nbsp print(" | ", end="")
+                            </div>
+                        </div>
+                        <div class="indent2">
+                            if j == 8:
+                            <div class="indent2">
+                                &nbsp &nbsp print(sudoku[i][j])
+                            </div>
+                        </div>
+                        <div class="indent2">
+                            else:
+                            <div class="indent2">
+                                &nbsp &nbsp print(str(sudoku[i][j])+ " ", end="")
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    So now out sudoku looks something like this
+                </p>
+                <img src="sudoku.png" style = "float: none; margin-left: 3rem;">
+            </div>
+            <div class="paragraph">
+                <h3>3. Create a function that checks if a number is valid</h3>
+                <p>
+                    If you are reading this I assume that you also learn how to play sudoku. But I am going to explain what the code does anyways
+                </p>
+                <div class="code">
+                    def valid (sudoku, num, pos):<br>
+                    &nbspfor i in range (0, len(sudoku[0])):
+                    <div class="indent">
+                        for i in range (0, len(sudoku[0])):
+                        <div class="indent2">
+                            if sudoku[pos[0]][i] == num:
+                            <div class="indent2">
+                                &nbsp &nbsp return False
+                            </div>
+                        </div>
+                    </div>
+                    <div class="indent">
+                        for j in range (0, len(sudoku)):
+                        <div class="indent2">
+                            if sudoku[j][pos[1]] == num:
+                            <div class="indent2">
+                                &nbsp &nbsp return False
+                            </div>
+                        </div>
+                    </div>
+                    &nbspbox_x = pos[1] // 3<br>
+                    &nbspbox_y = pos[0] //3<br>
+                    &nbspfor i in range (box_y*3, box_y*3 +3):<br>
+                    <div class="indent">
+                        for i in range (box_y*3, box_y*3 +3):
+                        <div class="indent2">
+                            for j in range(box_x * 3, box_x * 3 + 3):
+                            <div class="indent2">
+                                &nbsp &nbsp if sudoku[i][j] == num and (i, j) !=  pos:
+                                <div class="indent2">
+                                    &nbsp &nbsp &nbsp &nbsp return False
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    &nbspreturn True
+                </div>
+                <p>
+                    The first part checks if the number we are trying to enter I already present in the raw, or in the column
+                </p>
+                <div class="code">
+                    &nbspfor i in range (0, len(sudoku[0])):
+                    <div class="indent">
+                        for i in range (0, len(sudoku[0])):
+                        <div class="indent2">
+                            if sudoku[pos[0]][i] == num:
+                            <div class="indent2">
+                                &nbsp &nbsp return False
+                            </div>
+                        </div>
+                    </div>
+                    <div class="indent">
+                        for j in range (0, len(sudoku)):
+                        <div class="indent2">
+                            if sudoku[j][pos[1]] == num:
+                            <div class="indent2">
+                                &nbsp &nbsp return False
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    The second part checks if the number is present in the square
+                </p>
+                <div class="code">
+                    &nbspbox_x = pos[1] // 3<br>
+                    &nbspbox_y = pos[0] //3<br>
+                    &nbspfor i in range (box_y*3, box_y*3 +3):<br>
+                    <div class="indent">
+                        for i in range (box_y*3, box_y*3 +3):
+                        <div class="indent2">
+                            for j in range(box_x * 3, box_x * 3 + 3):
+                            <div class="indent2">
+                                &nbsp &nbsp if sudoku[i][j] == num and (i, j) !=  pos:
+                                <div class="indent2">
+                                    &nbsp &nbsp &nbsp &nbsp return False
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    We can identify a certain box because we are doing an integer division in Python, and that means we won’t have any reminder. This allows us to have the some result when we divide the first 3 rows (all of the 3 will be 0 as the first row’s index is 0), the same result when we divide the rows from 3 to 6 (it will always make 1) and same for the rows from 6 to 9, allowing us to have 3 vertical zones. By doing the same with the columns we will have 9 zones, that we can refer to using coordinates like in the 2D array. The reason I add 3 to the box_y variable is because I will already have checked the squares in the first row, and it would be useless to check them again.<br>
+                    So if none of these cases are present, then we can return True.
+                </p>
+            </div>
+            <div class="paragraph">
+                <h3>4. Creating a function that knows if a space in the sudoku is blank</h3>
+                <p>
+                    This one is pretty simple and I think it doesn’t really need an explanation
+                </p>
+                <div class="code">
+                    def findblank (sudoku):<br>
+                    &nbsp for i in range (0, len(sudoku)):
+                    <div class="indent">
+                        for j in range (0, len(sudoku[0])):
+                        <div class="indent2">
+                            if sudoku[i][j] == 0:
+                            <div class="indent2">
+                                &nbsp return (i, j)
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="paragraph">
+                <h3>5.	Now finally code the function that will solve the sudoku</h3>
+                <p>Knowing when a number is valid and where to put it, we can proceed with the backtracking approach</p>
+                <div class="code">
+                    def solve(sudoku):<br>
+                    &nbspfind = findblank(sudoku)<br>
+                    &nbspif not find:
+                    <div class="indent">
+                        return True
+                    </div>
+                    &nbspelse:
+                    <div class="indent">
+                        row, col = find
+                    </div>
+                    &nbspfor i in range (1,10):
+                    <div class="indent">
+                        if valid(sudoku, i,(row, col)):
+                        <div class="indent2">
+                            sudoku[row][col] = i            
+                        </div>
+                        <div class="indent2">
+                            if solve(sudoku):
+                            <div class="indent2">
+                                &nbsp return True
+                            </div>
+                            <div class="indent2">
+                                sudoku[row][col] = 0
+                            </div>
+                        </div>
+                    </div>
+                    &nbsp return False
+                </div>
+                <p>
+                    We will try and put the first valid number in the empty square, but when we will find an error, we will then take that last square and equal it to 0 and keep trying with the next valid number, until eventually we will end up with solving the sudoku. This might seem a long process it will be just instant!
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <div class="FName">
+            <h3>Denis Craciun</h3>
+        </div>
+        <div class="FEmailContainer">
+            <div class="FEmail">
+                <div class="fa fa-envelope"></div>
+                <div class="FEmailName">deniscraciun18@icloud.com</div>
+            </div>
+        </div>
+        <div class="FFollowContainer">
+            <div class="FFollow">
+                <div class="FFollowMessage" >Follow me on:</div>
+                <a href="https://www.instagram.com/_deniscraciun_/" target="_blank"><div class="fa fa-instagram"></div></a>
+                <a href="https://github.com/DenisCraciunGabriel" target="_blank"><div class="fa fa-github"></div></a>
+                <a href="https://twitter.com/deniscraciun4" target="_blank"><div class="fa fa-twitter"></div></a>
+            </div>
+        </div>
+
+    </footer>
+
+    <div class="copyright">
+        Copyright © 2021 Denis Craciun All Rights Reserved.
+    </div>
+
+
+    <script src="../../SCRIPTS.js"></script>
+</body>
+</html>
