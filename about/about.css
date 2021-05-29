@@ -380,6 +380,7 @@ footer{
 }
 #smart-button-container{
     grid-area: donation;
+    width:50%;
 }
 #item-options{
     display: block;
