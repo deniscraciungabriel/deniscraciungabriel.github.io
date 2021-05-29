@@ -163,37 +163,32 @@
             </div>
         </div>
         
-        <div id="smart-button-container"></div>
+        <div id="smart-button-container">
+            <div class="Payments" id="Payments">
 
+                <div class="Payment">
+                    <input type="radio" id="male" name="price" value="1" checked=checked onclick="SelectPrice()">
+                    <label for="male">1€</label><br>
+                </div>
+
+                <div class="Payment">
+                    <input type="radio" id="female" name="price" value="5" onclick="SelectPrice()">
+                    <label for="female">5€</label><br>
+                </div>
+
+                <div class="Payment">
+                    <input type="radio" id="other" name="price" value="10" onclick="SelectPrice()">
+                    <label for="other">10€</label>
+                </div>
+                
+            </div>
+            
+        </div>
+
+
+    
     <!-- Include the PayPal JavaScript SDK -->
     <script src="https://www.paypal.com/sdk/js?client-id=AbU5jArTlbL8npdsO83KwOY10P_wWzp3nQNvxD6Vms8egBZIDr2LQZFt_r8xZJKEi3SVhmPF_iTKu6PW&currency=USD&enable-funding=paypal"></script>
-
-    <script>
-        // Render the PayPal button into #paypal-button-container
-        paypal.Buttons({
-
-            // Set up the transaction
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: '1'
-                        }
-                    }]
-                });
-            },
-
-            // Finalize the transaction
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    // Show a success message to the buyer
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-                });
-            }
-
-
-        }).render('#smart-button-container');
-    </script>
     </footer>
 
     <div class="copyright">
@@ -202,5 +197,6 @@
 
 
     <script src="../SCRIPTS.js"></script>
+    <script src="about.js"></script>
 </body>
 </html>
