@@ -536,6 +536,7 @@ footer{
         "donation";
     }
     #smart-button-container{
+        display: block;
         margin-left: auto;
         margin-right: auto;
     }
