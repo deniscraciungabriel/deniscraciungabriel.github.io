@@ -539,6 +539,7 @@ footer{
         display: block;
         margin-left: auto;
         margin-right: auto;
+        width: 60%;
     }
     .FEmailContainer{
         margin-top: 24px;
