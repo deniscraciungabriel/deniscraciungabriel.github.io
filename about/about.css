@@ -395,6 +395,20 @@ footer{
     margin-right: auto;
     width:50%;
 }
+.Payments{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.Payment input{
+    width: 1rem;
+    display: block;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+.Payment{
+    display: flex;
+}
 
 
 
