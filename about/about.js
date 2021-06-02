@@ -4,7 +4,7 @@ function SelectPrice() {
     const rbs = document.querySelectorAll('input[name="price"]');
     for (const rb of rbs) {
         if (rb.checked) {
-            selectedValue = rb.value;
+            selectedValue = rb.value * 1.22;
             break;
         }
     }
