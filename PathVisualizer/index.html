@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/890fc2536a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="instructions">
+        <div class="startInstruction">
+            <div class="SIB"></div>
+            <div>Start</div>
+        </div>
+        <div class="endInstruction">
+            <div class="EIB"></div>
+            <div>End</div>
+        </div>
+        <div class="wallInstruction">
+            <div class="WIB"></div>
+            <div>Wall</div>
+        </div>
+        <div class="ereaseInstruction">
+            <i class="fas fa-eraser ErIB"></i>
+            <div>Press or hold Central Mouse Button (wheel) to erase</div>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="button-30" role="button" onclick="Start()">Start Algorithm</button>
+        <button class="button-30" role="button" onclick="Stop()">Stop</button>
+        <button class="button-30" role="button" onclick="location.reload()">Clear</button>
+    </div>
+    <div class="wrapper">
+
+        <div class="container" id="container" onmousedown="ChangeStateTrue(event)" onmouseup="ChangeStateFalse(event)">
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
