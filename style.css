@@ -196,6 +196,9 @@ a{
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
+.projectsPage a{
+  text-decoration: none;
+}
 .project{
   display: grid;
   font-size: 15px;
