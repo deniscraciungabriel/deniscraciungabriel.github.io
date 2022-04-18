@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UK Slang Wordle</title>
+    <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/890fc2536a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <header id="header">
+        <div>
+            <i class="fa fa-question-circle" aria-hidden="true" onclick="showInstructions()"></i>
+            <div class="title">🇬🇧 UK Slangle 🇬🇧</div>
+
+        </div>
+    </header>
+
+    <div class="gridWrapper">
+        <div class="grid" id="grid"></div>
+    </div>
+
+    <div class="winAlert" id="winAlert">
+        <div class="winTitle">🏆 Word Guessed! 🏆</div>
+        <div class="details" id="winWord">✍🏻 Word: </div>
+        <div class="details" id="winAttempts">❌ Attempts used: </div>
+    </div>
+
+    <div class="winAlert" id="loseAlert">
+        <div class="winTitle">❌ Wrong Word! ❌</div>
+        <div class="details" id="loseWord">✍🏻 Word: </div>
+    </div>
+
+    <div id="help-modal">
+        <div class="overlay">
+            <div class="content">
+                <i class="fa fa-close" onclick="closeInstructions()"></i>
+                <section>
+                    <div class="instructions">
+                        <p>Guess the <strong>UK slang word</strong> in 4 tries.</p>
+                        <p>Hit the enter button to submit.</p>
+                        <p>After each guess, the color of the tiles will change to show how close your guess was to the
+                            word.</p>
+                        <div class="examples">
+                            <p><strong>Examples</strong></p>
+                            <div class="example">
+                                <div class="example-grid">
+                                    <div class="tile" data-state="correct">d</div>
+                                    <div class="tile" data-state="example">o</div>
+                                    <div class="tile" data-state="example">d</div>
+                                    <div class="tile" data-state="example">g</div>
+                                    <div class="tile" data-state="example">y</div>
+                                </div>
+                                <p>The letter <strong>D</strong> is in the word and in the correct spot.</p>
+                            </div>
+                            <div class="example">
+                                <div class="example-grid">
+                                    <div class="tile" data-state="example">g</div>
+                                    <div class="tile" data-state="present">r</div>
+                                    <div class="tile" data-state="example">a</div>
+                                    <div class="tile" data-state="example">n</div>
+                                    <div class="tile" data-state="example">d</div>
+                                </div>
+                                <p>The letter <strong>R</strong> is in the word but in the wrong spot.</p>
+                            </div>
+                            <div class="example">
+                                <div class="example-grid">
+                                    <div class="tile" data-state="example">c</div>
+                                    <div class="tile" data-state="example">r</div>
+                                    <div class="tile" data-state="example">e</div>
+                                    <div class="tile" data-state="absent">p</div>
+                                    <div class="tile" data-state="example">s</div>
+                                </div>
+                                <p>The letter <strong>P</strong> is not in the word in any spot.</p>
+                            </div>
+                        </div>
+                        <p><strong>Unlike Wordle, you can keep playing how much you want by simply refreshing the page!
+                                The word will change every time</strong></p>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div data-keyboard="" class="keyboard" id="keyboard">
+
+            <div class="row">
+                <button class="key" data-key="Q">Q</button>
+                <button class="key" data-key="W">W</button>
+                <button class="key" data-key="E">E</button>
+                <button class="key" data-key="R">R</button>
+                <button class="key" data-key="T">T</button>
+                <button class="key" data-key="Y">Y</button>
+                <button class="key" data-key="U">U</button>
+                <button class="key" data-key="I">I</button>
+                <button class="key" data-key="O">O</button>
+                <button class="key" data-key="P">P</button>
+            </div>
+            <div class="row">
+                <div class="spacer"></div>
+                <button class="key" data-key="A">A</button>
+                <button class="key" data-key="S">S</button>
+                <button class="key" data-key="D">D</button>
+                <button class="key" data-key="F">F</button>
+                <button class="key" data-key="G">G</button>
+                <button class="key" data-key="H">H</button>
+                <button class="key" data-key="J">J</button>
+                <button class="key" data-key="K">K</button>
+                <button class="key" data-key="L">L</button>
+                <div class="spacer"></div>
+            </div>
+            <div class="row">
+                <button data-enter="" class="key large" onclick="submitLetter()">Enter</button>
+                <button class="key" data-key="Z">Z</button>
+                <button class="key" data-key="X">X</button>
+                <button class="key" data-key="C">C</button>
+                <button class="key" data-key="V">V</button>
+                <button class="key" data-key="B">B</button>
+                <button class="key" data-key="N">N</button>
+                <button class="key" data-key="M">M</button>
+                <button data-delete="" class="key large" onclick="deleteLetter()">
+                    <i class="fas fa-backspace"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
