@@ -537,6 +537,12 @@ a {
   filter: opacity(0.5);
 }
 
+#uk {
+  width: 300px;
+}
+
+
+
 /*phone*/
 @media (max-width:450px) {
   .ripple-background {
@@ -704,6 +710,10 @@ a {
   #elba {
     width: 200px;
     height: 200px;
+  }
+
+  #uk {
+    margin-top: 3rem;
   }
 }
 
