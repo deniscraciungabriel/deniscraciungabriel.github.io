@@ -24,6 +24,10 @@ a {
   color: white;
 }
 
+.menu a {
+  text-decoration: none;
+}
+
 
 
 
