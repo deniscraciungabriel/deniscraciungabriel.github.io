@@ -1,360 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Denis Craciun</title>
-    <link href="style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,200&family=Chivo:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/890fc2536a.js" crossorigin="anonymous"></script>
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@1,200&family=Chivo:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/890fc2536a.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="shortcut icon" type="image/jpg" href="Images/icon.png" />
-</head>
+  </head>
 
-<body>
-    <div class="ripple-background">
-        <div class="circle xxlarge shade1"></div>
-        <div class="circle xlarge shade2"></div>
-        <div class="circle large shade3"></div>
-        <div class="circle mediun shade4"></div>
-        <div class="circle small shade5"></div>
-    </div>
+  <body>
     <section class="introPage">
-        <header>
-            <img src="images/icon.png" id="logo">
-            <div class="menu">
-                <div class="menuSec" onclick="document.getElementById('about').scrollIntoView();" id="aboutMe">About me
-                </div>
-                <div class="menuSec" onclick="document.getElementById('work').scrollIntoView();">My Work</div>
-                <div class="menuSec" onclick="document.getElementById('contact').scrollIntoView();">Contact
-                </div>
-                <a href="https://deniscraciun.com/Resume.pdf"><div class="menuSec Resume" id="cv">Resume</div></a>
-            </div>
-        </header>
-        <div class="introContainer">
-
-            <div class="introDescription">
-                <div class="firstBodyText" id="firstBodyText"></div>
-                <p class="hi">Hi There 👋🏻 I'm</p>
-                <p class="name" id="denis">Denis Craciun</p>
-                <p class="profession">Full Stack developer</p>
-                <p class="sub-profession">I am a Full Stack developer living in Italy. Currently in college.</p>
-                <div class="lastBodyText" id="lastBodyText"></div>
-            </div>
-
-            <div class="introImage">
-                <img src="images/animoji.webp">
-            </div>
-            <div class="cube"></div>
-            <div class="cube"></div>
-            <div class="cube"></div>
-            <div class="cube"></div>
-            <div class="cube"></div>
-
+      <header>
+        <div style="display: flex; align-items: center">
+          <img src="images/icon.png" id="logo" />
+          <div style="margin-left: 1rem; display: flex; flex-direction: column">
+            <a href="https://www.instagram.com/_deniscraciun_/"
+              ><i class="fa fa-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/denis-craciun-2a3b391b8"
+              ><i class="fa fa-linkedin-square"></i
+            ></a>
+          </div>
         </div>
+        <div class="menu">
+          <div
+            class="menuSec"
+            onclick="document.getElementById('about').scrollIntoView();"
+            id="aboutMe"
+          >
+            About me
+          </div>
+          <div
+            class="menuSec"
+            onclick="document.getElementById('work').scrollIntoView();"
+          >
+            My Work
+          </div>
+          <div
+            class="menuSec"
+            onclick="document.getElementById('contact').scrollIntoView();"
+          >
+            Contact
+          </div>
+          <a href="https://deniscraciun.com/Resume.pdf"
+            ><div class="menuSec Resume" id="cv">Resume</div></a
+          >
+        </div>
+      </header>
+      <div class="introContainer">
+        <div class="introDescription">
+          <div class="firstBodyText" id="firstBodyText"></div>
+          <p class="hi">Hi There 👋🏻 I'm</p>
+          <p class="name" id="denis">Denis Craciun</p>
+          <p class="profession">Software Developer</p>
+          <p class="sub-profession">
+            I am a Software Developer living in Italy. Currently working for
+            Abivet and studying CS in first year.
+          </p>
+          <div class="lastBodyText" id="lastBodyText"></div>
+        </div>
+
+        <div class="introImage">
+          <img src="images/animoji.webp" id="animoji" />
+        </div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+        <div class="cube"></div>
+      </div>
     </section>
 
     <section class="aboutPage" id="about">
-        <div class="aboutImage">
-            <div class="about1"></div>
-            <div class="aboutFle">
-                <div class="about2"></div>
-                <img src="images/me.jpeg">
-            </div>
+      <div class="aboutImage">
+        <div class="about1"></div>
+        <div class="aboutFle">
+          <div class="about2"></div>
+          <img src="images/me.jpeg" />
         </div>
-        <div class="aboutDescription">
-            <div class="aboutTitle">
-                <div>Who I am</div>
-                <div class="line"></div>
-            </div>
-            <div class="firstAboutText" id="firstAboutText"></div>
-            <p>Hello! My name is Denis Craciun and I enjoy creating things on the internet and working with the back-end
-                (although I also work with the front-end).
-                My interest in programming started in 2020, during the Covid-19 lockdown, when I decided I was going to
-                learn Python. I then learned more and more programming languages and technologies (feel free to check my
-                resume about that by either clicking the resume button or going to <a
-                    href="https://deniscraciun.com/Resume.pdf">this link</a>). My strong point is working with the backend,
-                and languages such as JAVA, Python and Javascript are my main ones. I have strong knowlege about
-                algorithms, and a very solid logic with very good problem solving skills. Cybersecurity is another
-                passion that I have and that I'm trying to develop more and more. I am currently working as a software developer for Abivet, whilst studying Computer Science at the University Of Pisa..</p>
-            <div class="lastAboutText" id="lastAboutText"></div>
+      </div>
+      <div class="aboutDescription">
+        <div class="aboutTitle">
+          <div>Who I am</div>
+          <div class="line"></div>
         </div>
+        <div class="firstAboutText" id="firstAboutText"></div>
+        <p>
+          Hello! My name is Denis Craciun and I enjoy creating things on the
+          internet and working with the back-end (although I also work with the
+          front-end). My interest in programming started in 2020, during the
+          Covid-19 lockdown, when I decided I was going to learn Python. I then
+          learned more and more programming languages and technologies (feel
+          free to check my resume about that by either clicking the resume
+          button or going to
+          <a href="https://deniscraciun.com/Resume.pdf">this link</a>). My
+          strong point is working with the backend, and languages such as JAVA,
+          Python and Javascript are my main ones. I have strong knowlege about
+          algorithms, and a very solid logic with very good problem solving
+          skills. Cybersecurity is another passion that I have and that I'm
+          trying to develop more and more. I am currently working as a software
+          developer for Abivet, whilst studying Computer Science at the
+          University Of Pisa.
+        </p>
+        <div class="lastAboutText" id="lastAboutText"></div>
+      </div>
     </section>
 
     <section class="projectsPage" id="work">
-
-        <div class="project">
-            <a href="https://deniscraciun.com/pathvisualiser"><img src="images/path.png" class="articleImageBig"></a>
-            <div class="articleDescription">
-                <a href="https://deniscraciun.com/pathvisualiser">
-                    <div class="articleTitle">
-                        Dijkstra's Algorithm
-                    </div>
-                </a>
-                <p>
-                    This is a visual representation of how Dijkstra's algorithm works. Its purpose is to find the
-                    shortest path between 2 given points. The representation also includes the possibility to
-                    create
-                    walls, and see how the program behaves.
-                </p>
-                <div class="articleLanguages">
-                    <div>Javascript (vanilla)</div>
-                    <div>HTML</div>
-                    <div>CSS</div>
-                </div>
-            </div>
+      <div class="project">
+        <a href="https://deniscraciun.com/pathvisualiser"
+          ><img src="images/path.png" class="articleImageBig"
+        /></a>
+        <div class="articleDescription">
+          <a href="https://deniscraciun.com/pathvisualiser">
+            <div class="articleTitle">Dijkstra's Algorithm</div>
+          </a>
+          <p>
+            This is a visual representation of how Dijkstra's algorithm works.
+            Its purpose is to find the shortest path between 2 given points. The
+            representation also includes the possibility to create walls, and
+            see how the program behaves.
+          </p>
+          <div class="articleLanguages">
+            <div>Javascript (vanilla)</div>
+            <div>HTML</div>
+            <div>CSS</div>
+          </div>
         </div>
+      </div>
 
-        <div class="projectReversed">
-            <div class="articleDescriptionReversed">
-                <a href="https://play.google.com/store/apps/details?id=com.deniscraciun.elbashare">
-                    <div class="articleTitleReversed">
-                        ElbaShare
-                    </div>
-                </a>
-                <p>
-                    This is a social network I created for the place where I live: Elba Island. Its most important
-                    function is the possibility to see where other users are on the Elba Island map, and this social
-                    won't work outside it. The app is available to download from the Playstore. Feel free to text me
-                    if
-                    you are not from Elba and you just want to be able to use it and check out its features.
-                </p>
-                <div class="articleLanguagesReversed">
-                    <div>Dart (flutter)</div>
-                    <div>Firebase</div>
-
-                </div>
-            </div>
-            <a href="https://play.google.com/store/apps/details?id=com.deniscraciun.elbashare"><img
-                    src="images/elba.png" id="elba" class="articleImageBig"></a>
+      <div class="projectReversed">
+        <div class="articleDescriptionReversed">
+          <a
+            href="https://play.google.com/store/apps/details?id=com.deniscraciun.elbashare"
+          >
+            <div class="articleTitleReversed">ElbaShare</div>
+          </a>
+          <p>
+            This is a social network I created for the place where I live: Elba
+            Island. Its most important function is the possibility to see where
+            other users are on the Elba Island map, and this social won't work
+            outside it. The app is available to download from the Playstore.
+            Feel free to text me if you are not from Elba and you just want to
+            be able to use it and check out its features.
+          </p>
+          <div class="articleLanguagesReversed">
+            <div>Dart (flutter)</div>
+            <div>Firebase</div>
+          </div>
         </div>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.deniscraciun.elbashare"
+          ><img src="images/elba.png" id="elba" class="articleImageBig"
+        /></a>
+      </div>
 
-        <div class="project">
-            <a href="https://replit.com/@Denis-GabrielCr/Physics-Simulation#main.py"><img src="images/physics.png"
-                    class="articleImageBig"></a>
-            <div class="articleDescription">
-                <a href="https://replit.com/@Denis-GabrielCr/Physics-Simulation#main.py">
-                    <div class="articleTitle">
-                        Realistic Physics Simulation
-                    </div>
-                </a>
-                <p>
-                    This is a simulation where you can throw a ball around different objects with realistic physics, all
-                    thanks to a Python module called "Pymunk". Pymunk can be integrated with Pygame (like in this case),
-                    which takes care of all the visuals whilst Pymunk takes care of the calculations. Everything can be
-                    changed as you like: gravity, mass, elasticity, friction, colors. The module takes care of the
-                    harder maths, but ball trajectory and everything else is done by hand as you can see from the GitHub
-                    repository of this project. Of course Pymunk and Pygame are required for this project to run.
-                </p>
-                <div class="articleLanguages">
-                    <div>Python</div>
-                    <div>Pygame</div>
-                    <div>Pymunk</div>
-                </div>
-            </div>
+      <div class="project">
+        <a href="https://replit.com/@Denis-GabrielCr/Physics-Simulation#main.py"
+          ><img src="images/physics.png" class="articleImageBig"
+        /></a>
+        <div class="articleDescription">
+          <a
+            href="https://replit.com/@Denis-GabrielCr/Physics-Simulation#main.py"
+          >
+            <div class="articleTitle">Realistic Physics Simulation</div>
+          </a>
+          <p>
+            This is a simulation where you can throw a ball around different
+            objects with realistic physics, all thanks to a Python module called
+            "Pymunk". Pymunk can be integrated with Pygame (like in this case),
+            which takes care of all the visuals whilst Pymunk takes care of the
+            calculations. Everything can be changed as you like: gravity, mass,
+            elasticity, friction, colors. The module takes care of the harder
+            maths, but ball trajectory and everything else is done by hand as
+            you can see from the GitHub repository of this project. Of course
+            Pymunk and Pygame are required for this project to run.
+          </p>
+          <div class="articleLanguages">
+            <div>Python</div>
+            <div>Pygame</div>
+            <div>Pymunk</div>
+          </div>
         </div>
-        <div class="projectReversed">
-            <div class="articleDescriptionReversed">
-                <a href="https://deniscraciun.com/ukslangle">
-                    <div class="articleTitleReversed">
-                        UK Slangle
-                    </div>
-                </a>
-                <p>
-                    Inspiered by the populare game "Wordle" in which you need to guess a 5 letter word in 5 tries, this
-                    is a version in which you need to guess the UK slang word. The word can either be of 4, 5 or 6
-                    letters and you have 4 tries to guess it.
-                </p>
-                <div class="articleLanguagesReversed">
-                    <div>Javascript</div>
-                    <div>HTML</div>
-                    <div>CSS</div>
-                </div>
-            </div>
-            <a href="https://deniscraciun.com/ukslangle"><img src="images/slangle.png" id="uk"
-                    class="articleImageBig"></a>
+      </div>
+      <div class="projectReversed">
+        <div class="articleDescriptionReversed">
+          <a href="https://deniscraciun.com/ukslangle">
+            <div class="articleTitleReversed">UK Slangle</div>
+          </a>
+          <p>
+            Inspiered by the populare game "Wordle" in which you need to guess a
+            5 letter word in 5 tries, this is a version in which you need to
+            guess the UK slang word. The word can either be of 4, 5 or 6 letters
+            and you have 4 tries to guess it.
+          </p>
+          <div class="articleLanguagesReversed">
+            <div>Javascript</div>
+            <div>HTML</div>
+            <div>CSS</div>
+          </div>
         </div>
+        <a href="https://deniscraciun.com/ukslangle"
+          ><img src="images/slangle.png" id="uk" class="articleImageBig"
+        /></a>
+      </div>
 
-        <div class="project">
-            <a href="https://github.com/deniscraciungabriel/eCommerceAPI"><img src="images/eCommerce.png" class="articleImageBig"></a>
-            <div class="articleDescription">
-                <a href="https://github.com/deniscraciungabriel/eCommerceAPI">
-                    <div class="articleTitle">
-                        eCommerce API with JWT Auth
-                    </div>
-                </a>
-                <p>
-                    This is a store API made with NodeJS and MongoDB. There are all the functionalities that a common eCommerce has like searching for products, sorting them, posting, deleting, patching and more. Functionalities are limited by a login system with JWT that allows you certain ones based on your user role.
-                </p>
-                <div class="articleLanguages">
-                    <div>NodeJS</div>
-                    <div>JWT</div>
-                </div>
-            </div>
+      <div class="project">
+        <a href="https://github.com/deniscraciungabriel/eCommerceAPI"
+          ><img src="images/eCommerce.png" class="articleImageBig"
+        /></a>
+        <div class="articleDescription">
+          <a href="https://github.com/deniscraciungabriel/eCommerceAPI">
+            <div class="articleTitle">eCommerce API with JWT Auth</div>
+          </a>
+          <p>
+            This is a store API made with NodeJS and MongoDB. There are all the
+            functionalities that a common eCommerce has like searching for
+            products, sorting them, posting, deleting, patching and more.
+            Functionalities are limited by a login system with JWT that allows
+            you certain ones based on your user role.
+          </p>
+          <div class="articleLanguages">
+            <div>NodeJS</div>
+            <div>JWT</div>
+          </div>
         </div>
+      </div>
 
-        <div class="projectReversed">
-            <div class="articleDescriptionReversed">
-                <a href="https://github.com/deniscraciungabriel/Java-TCP-Chat-Server">
-                    <div class="articleTitleReversed">
-                        Java TCP Chat Server
-                    </div>
-                </a>
-                <p>
-                    This is a TCP Chat Server made with Java. It's pretty simple so there are no security verifications. There are no verifications for the username, but that would just imply some if statements and nothing too hard. This is also just the backend so there is no GUI created for it. More info on my Github.
-                </p>
-                <div class="articleLanguagesReversed">
-                    <div>Java</div>
-                    <div>Sockets</div>
-                </div>
-            </div>
-            <a href="https://github.com/deniscraciungabriel/Java-TCP-Chat-Server"><img src="images/chat.jpg"
-                    class="articleImageBig" id="elba"></a>
+      <div class="projectReversed">
+        <div class="articleDescriptionReversed">
+          <a href="https://github.com/deniscraciungabriel/Java-TCP-Chat-Server">
+            <div class="articleTitleReversed">Java TCP Chat Server</div>
+          </a>
+          <p>
+            This is a TCP Chat Server made with Java. It's pretty simple so
+            there are no security verifications. There are no verifications for
+            the username, but that would just imply some if statements and
+            nothing too hard. This is also just the backend so there is no GUI
+            created for it. More info on my Github.
+          </p>
+          <div class="articleLanguagesReversed">
+            <div>Java</div>
+            <div>Sockets</div>
+          </div>
         </div>
+        <a href="https://github.com/deniscraciungabriel/Java-TCP-Chat-Server"
+          ><img src="images/chat.jpg" class="articleImageBig" id="elba"
+        /></a>
+      </div>
 
-        <div class="project">
-            <a href="https://github.com/deniscraciungabriel/shell-in-C"><img src="images/shell.png" class="articleImageBig"></a>
-            <div class="articleDescription">
-                <a href="https://github.com/deniscraciungabriel/shell-in-C">
-                    <div class="articleTitle">
-                        Creating a shell in C
-                    </div>
-                </a>
-                <p>
-                    This is a basic shell created in C from scratch. It does most of the things someone needs. A very useful project to deeply understand how a shell works and how to manage processes in C.
-                </p>
-                <div class="articleLanguages">
-                    <div>C</div>
-                </div>
-            </div>
+      <div class="project">
+        <a href="https://github.com/deniscraciungabriel/shell-in-C"
+          ><img src="images/shell.png" class="articleImageBig"
+        /></a>
+        <div class="articleDescription">
+          <a href="https://github.com/deniscraciungabriel/shell-in-C">
+            <div class="articleTitle">Creating a shell in C</div>
+          </a>
+          <p>
+            This is a basic shell created in C from scratch. It does most of the
+            things someone needs. A very useful project to deeply understand how
+            a shell works and how to manage processes in C.
+          </p>
+          <div class="articleLanguages">
+            <div>C</div>
+          </div>
         </div>
+      </div>
 
-        <div class="otherProjects">
-            <div class="otherPro">
-                <div class="otherIcons">
-                    <i class="fa fa-folder"></i>
-                    <a href="https://handmadeandrushka.com"><i class="fa fa-share" onclick="r"></i></a>
-                </div>
-                <div class="otherDesc">
-                    <div class="otherTitle">eCommerce Website</div>
-                    <p>This is an eCommerce website (currently still running) that sells hand made products. It was
-                        made
-                        using Stripe for payments.</p>
-                    <div class="otherLanguages">
-                        <div>Javascript (nodeJS)</div>
-                        <div>Stripe</div>
-                        <div>HTML/CSS</div>
-                    </div>
-                </div>
+      <div class="otherProjects">
+        <div class="otherPro">
+          <div class="otherIcons">
+            <i class="fa fa-folder"></i>
+            <a href="https://handmadeandrushka.com"
+              ><i class="fa fa-share" onclick="r"></i
+            ></a>
+          </div>
+          <div class="otherDesc">
+            <div class="otherTitle">eCommerce Website</div>
+            <p>
+              This is an eCommerce website (currently still running) that sells
+              hand made products. It was made using Stripe for payments.
+            </p>
+            <div class="otherLanguages">
+              <div>Javascript (nodeJS)</div>
+              <div>Stripe</div>
+              <div>HTML/CSS</div>
             </div>
-            <div class="otherPro">
-                <div class="otherIcons">
-                    <i class="fa fa-folder"></i>
-                    <a href="https://github.com/deniscraciungabriel/Unofficial-Transfermarkt-API"><i class="fa fa-share" onclick="r"></i></a>
-                </div>
-                <div class="otherDesc">
-                    <div class="otherTitle">Unofficial Transfermarkt API</div>
-                    <p>This is an an unofficial API of the Transfermarkt website that I web scraped with the BeautifulSoup library, and put on a local server with Flask so it can be used. More about it if you click on it.</p>
-                    <div class="otherLanguages">
-                        <div>Python</div>
-                        <div>Flask</div>
-                        <div>BS4</div>
-                    </div>
-                </div>
-            </div>
-            <div class="otherPro">
-                <div class="otherIcons">
-                    <i class="fa fa-folder"></i>
-                    <a href="https://github.com/deniscraciungabriel/SudokuSolver"><i class="fa fa-share"></i></a>
-                </div>
-                <div class="otherDesc">
-                    <div class="otherTitle">Sudoku Solver</div>
-                    <p>This is a Sudoku solver created with Python. The way it works is thanks to backtracking. Check
-                        out
-                        this GitHub link for more info.</p>
-                    <div class="otherLanguages">
-                        <div>Python</div>
-                    </div>
-                </div>
-            </div>
-            <div class="otherPro">
-                <div class="otherIcons">
-                    <i class="fa fa-folder"></i>
-                    <a href="https://github.com/deniscraciungabriel/PygameHangMan"><i class="fa fa-share"></i></a>
-                </div>
-                <div class="otherDesc">
-                    <div class="otherTitle">Hangman Game</div>
-                    <p>This is a simple hangman game made with Python, using the Pygame library. More to find out on
-                        the
-                        GitHub page</p>
-                    <div class="otherLanguages">
-                        <div>Python</div>
-                        <div>Pygame</div>
-                    </div>
-                </div>
-            </div>
-            <div class="otherPro">
-                <div class="otherIcons">
-                    <i class="fa fa-folder"></i>
-                    <a href="https://github.com/deniscraciungabriel/HandTracking-with-Python"><i class="fa fa-share"
-                            onclick="r"></i></a>
-                </div>
-                <div class="otherDesc">
-                    <div class="otherTitle">Hand Tracking</div>
-                    <p>This is a hand tracking program made using the CV module in Python. It keeps track of the
-                        position of your fingers as well as the distance between the pinky finger and the thumb.</p>
-                    <div class="otherLanguages">
-                        <div>Python</div>
-                        <div>OpenCV</div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-
+        <div class="otherPro">
+          <div class="otherIcons">
+            <i class="fa fa-folder"></i>
+            <a
+              href="https://github.com/deniscraciungabriel/Unofficial-Transfermarkt-API"
+              ><i class="fa fa-share" onclick="r"></i
+            ></a>
+          </div>
+          <div class="otherDesc">
+            <div class="otherTitle">Unofficial Transfermarkt API</div>
+            <p>
+              This is an an unofficial API of the Transfermarkt website that I
+              web scraped with the BeautifulSoup library, and put on a local
+              server with Flask so it can be used. More about it if you click on
+              it.
+            </p>
+            <div class="otherLanguages">
+              <div>Python</div>
+              <div>Flask</div>
+              <div>BS4</div>
+            </div>
+          </div>
+        </div>
+        <div class="otherPro">
+          <div class="otherIcons">
+            <i class="fa fa-folder"></i>
+            <a href="https://github.com/deniscraciungabriel/SudokuSolver"
+              ><i class="fa fa-share"></i
+            ></a>
+          </div>
+          <div class="otherDesc">
+            <div class="otherTitle">Sudoku Solver</div>
+            <p>
+              This is a Sudoku solver created with Python. The way it works is
+              thanks to backtracking. Check out this GitHub link for more info.
+            </p>
+            <div class="otherLanguages">
+              <div>Python</div>
+            </div>
+          </div>
+        </div>
+        <div class="otherPro">
+          <div class="otherIcons">
+            <i class="fa fa-folder"></i>
+            <a href="https://github.com/deniscraciungabriel/PygameHangMan"
+              ><i class="fa fa-share"></i
+            ></a>
+          </div>
+          <div class="otherDesc">
+            <div class="otherTitle">Hangman Game</div>
+            <p>
+              This is a simple hangman game made with Python, using the Pygame
+              library. More to find out on the GitHub page
+            </p>
+            <div class="otherLanguages">
+              <div>Python</div>
+              <div>Pygame</div>
+            </div>
+          </div>
+        </div>
+        <div class="otherPro">
+          <div class="otherIcons">
+            <i class="fa fa-folder"></i>
+            <a
+              href="https://github.com/deniscraciungabriel/HandTracking-with-Python"
+              ><i class="fa fa-share" onclick="r"></i
+            ></a>
+          </div>
+          <div class="otherDesc">
+            <div class="otherTitle">Hand Tracking</div>
+            <p>
+              This is a hand tracking program made using the CV module in
+              Python. It keeps track of the position of your fingers as well as
+              the distance between the pinky finger and the thumb.
+            </p>
+            <div class="otherLanguages">
+              <div>Python</div>
+              <div>OpenCV</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <footer class="contactPage" id="contact">
-        <div class="contactTitle" id="#contactTitle">
-            <div>Contact Me</div>
-            <div class="line"></div>
+      <div class="contactTitle" id="#contactTitle">
+        <div>Contact Me</div>
+        <div class="line"></div>
+      </div>
+      <div class="finalContact">
+        <div class="contactDetails">
+          <div class="contactLocation contactD">
+            <i class="fa fa-map"></i>
+            <div>Italy, Pisa</div>
+          </div>
+          <div class="contactEmail contactD">
+            <i class="fa fa-envelope-open"></i>
+            <div>deniscraciun18@icloud.com</div>
+          </div>
+          <div class="contactNumber contactD">
+            <i class="fa fa-phone"></i>
+            <div>+39 324 601 4086</div>
+          </div>
         </div>
-        <div class="finalContact">
-            <div class="contactDetails">
-                <div class="contactLocation contactD">
-                    <i class="fa fa-map"></i>
-                    <div>Italy, Portoferraio</div>
-                </div>
-                <div class="contactEmail contactD">
-                    <i class="fa fa-envelope-open"></i>
-                    <div>deniscraciun18@icloud.com</div>
-                </div>
-                <div class="contactNumber contactD">
-                    <i class="fa fa-phone"></i>
-                    <div>+39 324 601 4086</div>
-                </div>
-            </div>
 
-            <form action="https://formspree.io/f/xqkndkra" method="POST" class="form">
-                <div class="Form">
-                    <input id="Name" placeholder="Name" class="Centered" name="name">
-                    <input id="Email" placeholder="Email" class="Centered" type="email" name="_replyto">
-                    <textarea id="Message" placeholder="Message" class="Centered" name="message"></textarea>
-                    <button type="submit" class="Centered" id="Button">Send</button>
-                </div>
-            </form>
-
-        </div>
+        <form
+          action="https://formspree.io/f/xqkndkra"
+          method="POST"
+          class="form"
+        >
+          <div class="Form">
+            <input id="Name" placeholder="Name" class="Centered" name="name" />
+            <input
+              id="Email"
+              placeholder="Email"
+              class="Centered"
+              type="email"
+              name="_replyto"
+            />
+            <textarea
+              id="Message"
+              placeholder="Message"
+              class="Centered"
+              name="message"
+            ></textarea>
+            <button type="submit" class="Centered" id="Button">Send</button>
+          </div>
+        </form>
+      </div>
     </footer>
 
     <script src="sc.js"></script>
-</body>
-
+  </body>
 </html>
